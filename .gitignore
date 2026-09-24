@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Secrets - NEVER commit these
+.env
+.env.*\.pem
+credential.json
