@@ -1,0 +1,16 @@
+name : Hello Workflow
+
+on :[pull_request]
+
+jobs:
+    greet:
+	runs-on:ubuntu-latest
+	steps:
+	    - name:Say hellow
+	      run :echo "Hello! This workflow ran automatically on your PR."
+	    
+            - name:Show the date
+	      run :date
+	    - name:List repo files
+	      uses :actions/checkout@v4
+            - run:ls -1a
