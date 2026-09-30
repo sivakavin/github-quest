@@ -1,0 +1,22 @@
+[project]
+name = "github-quest"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "SIVAKUMAR V", email = "77527218+sivakavin@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+github-quest = "github_quest:main"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
