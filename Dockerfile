@@ -2,13 +2,13 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy uv from the official uv image
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-COPY pyproject.toml uv.lock ./
+COPY pyproject.toml uv.lock README.md ./
+COPY src ./src
 
 RUN uv sync --frozen
 
-COPY . .
+COPY calculator.py .
 
 CMD ["uv", "run", "python", "calculator.py"]
